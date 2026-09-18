@@ -12,8 +12,8 @@
         "name": "source-component-pose-2026-09-14.1.tar.gz",
         "sha256": "0c43e1fb5cbf6ae3c6b25e632be53ca49fbd88a3488d70cc660bb0a4423e8ca9",
         "size_bytes": 7314727,
-        "availability": "local",
-        "download_url": null
+        "availability": "published",
+        "download_url": "https://github.com/VelocityPnP/velocitypnp-models/releases/download/models-2026-09-14.1/source-component-pose-2026-09-14.1.tar.gz"
       },
       "manifest_sha256": "2c34e926c58986f45aee1b68baaad2e64f4bca49a05a6833ae16d0cf10263f5d",
       "onnx_sha256": "c3273c4c128a4dfb8a3d258107a25c6ee283c051faa4333ede93d99d1f50a14c",
@@ -37,8 +37,8 @@
         "name": "held-part-pose-2026-09-14.1.tar.gz",
         "sha256": "e42eab879c95492237319742e8edb7a3964519a9482a688da9c9bc4dfbafa04c",
         "size_bytes": 4613382,
-        "availability": "local",
-        "download_url": null
+        "availability": "published",
+        "download_url": "https://github.com/VelocityPnP/velocitypnp-models/releases/download/models-2026-09-14.1/held-part-pose-2026-09-14.1.tar.gz"
       },
       "manifest_sha256": "44d3f41f0c27f5d9333b5cf28dc222ad5540b64e4c773e918f8cda1fe0e58d3e",
       "onnx_sha256": "6e3a50e742b5e6968dbf080a02fbb1d7cb24a5f16b23f4ab8879ffb27e3d08f4",
@@ -62,8 +62,8 @@
         "name": "placement-verification-2026-09-14.1.tar.gz",
         "sha256": "d3487ba2671e84ac09268bacf752064c7bbface950abe449d939a83567b93248",
         "size_bytes": 4520652,
-        "availability": "local",
-        "download_url": null
+        "availability": "published",
+        "download_url": "https://github.com/VelocityPnP/velocitypnp-models/releases/download/models-2026-09-14.1/placement-verification-2026-09-14.1.tar.gz"
       },
       "manifest_sha256": "cb2031b870783810fb0b17d94ea9fde1c55f5bd1cb784762c4773d3afbc9f87a",
       "onnx_sha256": "eb5302231998b3a0dba92c2746c76bfc3ebc82c45c347c5b0d49568eb63ba232",

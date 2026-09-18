@@ -69,8 +69,12 @@ def validate_entry(entry: object) -> None:
             "asset size is invalid")
     require(asset.get("availability") in AVAILABILITY, "asset availability is invalid")
     if asset["availability"] == "published":
-        require(isinstance(asset.get("download_url"), str),
-                "published asset needs a download URL")
+        expected_url = (
+            "https://github.com/VelocityPnP/velocitypnp-models/releases/download/"
+            f"{entry['release_tag']}/{asset['name']}"
+        )
+        require(asset.get("download_url") == expected_url,
+                "published asset has an unexpected download URL")
     else:
         require(asset.get("download_url") is None,
                 "local asset must not have a download URL")
