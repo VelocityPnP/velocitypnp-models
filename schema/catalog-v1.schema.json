@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VelocityPnP/velocitypnp-models/schema/catalog-v1.schema.json",
+  "title": "VelocityPnP model catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "models"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id", "family", "version", "status", "contract_version",
+          "release_tag", "asset", "manifest_sha256", "onnx_sha256",
+          "checkpoint_sha256", "dataset_content_sha256", "source",
+          "model_card"
+        ],
+        "properties": {
+          "id": {"type": "string"},
+          "family": {"type": "string"},
+          "version": {"type": "string"},
+          "status": {
+            "enum": ["candidate", "validated", "approved", "retired"]
+          },
+          "contract_version": {"type": "string"},
+          "release_tag": {"type": "string"},
+          "asset": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name", "sha256", "size_bytes", "availability",
+              "download_url"
+            ],
+            "properties": {
+              "name": {"type": "string"},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "size_bytes": {"type": "integer", "minimum": 1},
+              "availability": {"enum": ["local", "published"]},
+              "download_url": {"type": ["string", "null"]}
+            }
+          },
+          "manifest_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "onnx_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "checkpoint_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "dataset_content_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["git_commit", "dirty", "training_source_sha256"],
+            "properties": {
+              "git_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+              "dirty": {"type": "boolean"},
+              "training_source_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          },
+          "model_card": {"type": "string"}
+        }
+      }
+    }
+  }
+}
