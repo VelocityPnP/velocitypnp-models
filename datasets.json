@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "datasets": [
+    {
+      "id": "source-components/2026-09-14.1",
+      "family": "source-components",
+      "version": "2026-09-14.1",
+      "release_tag": "datasets-2026-09-26.1",
+      "asset": {
+        "name": "source-components-2026-09-14.1.tar.gz",
+        "sha256": "2ac92092652532d41e24a7f30b33990e91693ae7e5d7c5930fd8d3dfb337c58d",
+        "size_bytes": 6082066,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "9527823ff3ed225514d898da2e4e9b67e1afa4ad339f9c684cf1eacfbc04551c",
+      "content_sha256": "5f06a4f1dbc2f1e9d6d28e97024c7501b30d41389c6af1812b90512a7afdff04",
+      "sample_count": 213,
+      "included_sample_count": 201,
+      "split_counts": {
+        "train": 161,
+        "eval": 40
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge"
+      ],
+      "dataset_card": "datasets/source-components/2026-09-14.1/dataset-card.md"
+    },
+    {
+      "id": "source-components/2026-09-20.1",
+      "family": "source-components",
+      "version": "2026-09-20.1",
+      "release_tag": "datasets-2026-09-26.1",
+      "asset": {
+        "name": "source-components-2026-09-20.1.tar.gz",
+        "sha256": "8372d47ea4b69333e0f5333681cd77d8cdca5e9e5bcc1b0b18f040e9530e88d4",
+        "size_bytes": 7558632,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "051e9aee3621aa418f772d56997e1329a7552debb271173532c67e48556c458c",
+      "content_sha256": "91d49eb0b886cf1c4593e982e3479a931f75ee71deb59b68a0e30f585ccdf205",
+      "sample_count": 259,
+      "included_sample_count": 247,
+      "split_counts": {
+        "train": 181,
+        "eval": 66
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge"
+      ],
+      "dataset_card": "datasets/source-components/2026-09-20.1/dataset-card.md"
+    },
+    {
+      "id": "held-parts/2026-09-14.1",
+      "family": "held-parts",
+      "version": "2026-09-14.1",
+      "release_tag": "datasets-2026-09-26.1",
+      "asset": {
+        "name": "held-parts-2026-09-14.1.tar.gz",
+        "sha256": "c3032ce4f0af4602a32d5304c6b2f5bd6e56876cc46949a6a0e3596407e69df0",
+        "size_bytes": 84702878,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "1f25291052f81332e869fc6c9bfcd13d58f34fb71bbd936454fa59333cf5b5ec",
+      "content_sha256": "dadcb24a3145c3f75f4f2dfc61c0ec78008fa33f7f40dcfca3948cf7ef09ef79",
+      "sample_count": 308,
+      "included_sample_count": 307,
+      "split_counts": {
+        "train": 274,
+        "eval": 33
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge",
+        "multiple_components"
+      ],
+      "dataset_card": "datasets/held-parts/2026-09-14.1/dataset-card.md"
+    },
+    {
+      "id": "placement-verification/2026-09-14.1",
+      "family": "placement-verification",
+      "version": "2026-09-14.1",
+      "release_tag": "datasets-2026-09-26.1",
+      "asset": {
+        "name": "placement-verification-2026-09-14.1.tar.gz",
+        "sha256": "8a801fa15e11af208864505758c5606f0199a662b8baf5b3d5b58acd1da50140",
+        "size_bytes": 12792485,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "b00fd1b23634bd4567b95cfe4282ce0b1765bdb7bc83089e594a8532047e1860",
+      "content_sha256": "cdeac286ff2614166a3a8927346e3932deb1bd12c8c42b1b5dc8a63b5b08a808",
+      "sample_count": 122,
+      "included_sample_count": 122,
+      "split_counts": {
+        "train": 101,
+        "eval": 21
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge",
+        "multiple_components"
+      ],
+      "dataset_card": "datasets/placement-verification/2026-09-14.1/dataset-card.md"
+    }
+  ]
+}

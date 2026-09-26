@@ -16,7 +16,7 @@
           "id", "family", "version", "status", "contract_version",
           "release_tag", "asset", "manifest_sha256", "onnx_sha256",
           "checkpoint_sha256", "dataset_content_sha256", "source",
-          "model_card"
+          "dataset", "model_card"
         ],
         "properties": {
           "id": {"type": "string"},
@@ -55,6 +55,7 @@
             "type": "string",
             "pattern": "^[0-9a-f]{64}$"
           },
+          "dataset": {"type": "string"},
           "source": {
             "type": "object",
             "additionalProperties": false,

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/VelocityPnP/velocitypnp-models/schema/dataset-catalog-v1.schema.json",
+  "title": "VelocityPnP reviewed-dataset catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "datasets"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id", "family", "version", "release_tag", "asset",
+          "manifest_sha256", "content_sha256", "sample_count",
+          "included_sample_count", "split_counts", "classes",
+          "dataset_card"
+        ],
+        "properties": {
+          "id": {"type": "string"},
+          "family": {"type": "string"},
+          "version": {"type": "string"},
+          "release_tag": {"type": "string"},
+          "asset": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name", "sha256", "size_bytes", "availability",
+              "download_url"
+            ],
+            "properties": {
+              "name": {"type": "string"},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "size_bytes": {"type": "integer", "minimum": 1},
+              "availability": {"enum": ["local", "published"]},
+              "download_url": {"type": ["string", "null"]}
+            }
+          },
+          "manifest_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "content_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "sample_count": {"type": "integer", "minimum": 1},
+          "included_sample_count": {"type": "integer", "minimum": 1},
+          "split_counts": {
+            "type": "object",
+            "additionalProperties": {"type": "integer", "minimum": 0}
+          },
+          "classes": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "dataset_card": {"type": "string"}
+        }
+      }
+    }
+  }
+}

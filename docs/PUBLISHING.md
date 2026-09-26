@@ -1,5 +1,7 @@
 # Publishing procedure
 
+## Model packages
+
 Build a package:
 
 ```sh
@@ -33,6 +35,41 @@ new version. Do not delete, replace, or rename a published asset.
 
 A package stays a candidate until it passes independent evaluation and the
 VelocityPnP runtime test. Publishing is not approval, selection, or activation.
+
+## Dataset packages
+
+Build a reviewed dataset package:
+
+```sh
+python3 tools/dataset_package.py build \
+  FAMILY VERSION RELEASE_TAG DATASET_DIR \
+  --dataset-card datasets/FAMILY/VERSION/dataset-card.md \
+  --output-dir dist
+```
+
+Use `--manifest` when the final manifest is below `DATASET_DIR`. Use repeated
+`--audit-root NAME=PATH` options to preserve review inputs that are outside the
+final dataset directory.
+
+Verify the completed archive:
+
+```sh
+python3 tools/dataset_package.py verify \
+  dist/ASSET.tar.gz --sha256 EXPECTED_SHA256
+```
+
+1. Verify that the ground-truth manifest is final and operator-reviewed.
+2. Build the package and record it in `datasets.json` as `local`.
+3. Run the repository tests and catalog validation.
+4. Commit and push the dataset catalog and card.
+5. Create a draft release with a new `datasets-*` tag.
+6. Attach every dataset package to the draft release.
+7. Download and verify every attached asset.
+8. Publish the release only after all assets pass verification.
+9. Mark each asset `published`, record its permanent URL, and commit again.
+
+Published dataset releases are immutable. Correct an error with a new dataset
+version. Do not replace a published label or image.
 
 ## Current candidate release
 

@@ -19,6 +19,7 @@
       "onnx_sha256": "c3273c4c128a4dfb8a3d258107a25c6ee283c051faa4333ede93d99d1f50a14c",
       "checkpoint_sha256": "5f818707807782d4aa4255ad9fc00ba1a80ed4a3442797f2282596a1cc0b1190",
       "dataset_content_sha256": "5f06a4f1dbc2f1e9d6d28e97024c7501b30d41389c6af1812b90512a7afdff04",
+      "dataset": "source-components/2026-09-14.1",
       "source": {
         "git_commit": "58a1701dd1c6645837c386e3d2be5c3d74bb18c8",
         "dirty": true,
@@ -44,6 +45,7 @@
       "onnx_sha256": "6e3a50e742b5e6968dbf080a02fbb1d7cb24a5f16b23f4ab8879ffb27e3d08f4",
       "checkpoint_sha256": "ddf3cdb107986c34577a0cd62b6764ba3ea3cf4032780f119376987dae4303a0",
       "dataset_content_sha256": "dadcb24a3145c3f75f4f2dfc61c0ec78008fa33f7f40dcfca3948cf7ef09ef79",
+      "dataset": "held-parts/2026-09-14.1",
       "source": {
         "git_commit": "58a1701dd1c6645837c386e3d2be5c3d74bb18c8",
         "dirty": true,
@@ -69,6 +71,7 @@
       "onnx_sha256": "eb5302231998b3a0dba92c2746c76bfc3ebc82c45c347c5b0d49568eb63ba232",
       "checkpoint_sha256": "cc04b76a5471078b072aa46ec6939f9826edf86484e9e049dae1da8520d0aa6c",
       "dataset_content_sha256": "cdeac286ff2614166a3a8927346e3932deb1bd12c8c42b1b5dc8a63b5b08a808",
+      "dataset": "placement-verification/2026-09-14.1",
       "source": {
         "git_commit": "58a1701dd1c6645837c386e3d2be5c3d74bb18c8",
         "dirty": true,
