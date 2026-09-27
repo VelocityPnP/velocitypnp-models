@@ -78,6 +78,32 @@
         "training_source_sha256": "46821a7e3defeb8db23b085d8e44d00a98a9ff5669a17df28d04158037b5bbde"
       },
       "model_card": "models/placement-verification/2026-09-14.1/model-card.md"
+    },
+    {
+      "id": "source-component-pose/2026-09-26.1",
+      "family": "source-component-pose",
+      "version": "2026-09-26.1",
+      "status": "candidate",
+      "contract_version": "velocitypnp.source-component-pose.v2",
+      "release_tag": "models-2026-09-26.1",
+      "asset": {
+        "name": "source-component-pose-2026-09-26.1.tar.gz",
+        "sha256": "4febd70c9f480a1366a6059ee41b23217238fab22e445fa46277caf8c8f37259",
+        "size_bytes": 7390997,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "a12e60a72dc5cd49ee02b84b27ed68e810d0f2e88f069885cb2796d47aa6232f",
+      "onnx_sha256": "332f60a98933fab6c3d33bd4acaacfd2d7be2efefa38c8bd53cf0c3bcc96f0ae",
+      "checkpoint_sha256": "9c409a78243dac3bef90037698e7d3368cc17f66c24b937e5b5250f77bb792a7",
+      "dataset_content_sha256": "e108470370b3aebf0ac986b710c9755ad11cb844d5ae3a0a09ff345029ea8673",
+      "dataset": "source-components/2026-09-26.1",
+      "source": {
+        "git_commit": "0d6427d4e929f45f02c5fb3ccb2f36677ab51e22",
+        "dirty": false,
+        "training_source_sha256": "cd55c6ffe7aaf307315f8c992ebca4b12923c9fbeef869d44c7292ed32ae518e"
+      },
+      "model_card": "models/source-component-pose/2026-09-26.1/model-card.md"
     }
   ]
 }
