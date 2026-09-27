@@ -80,6 +80,57 @@
       "dataset_card": "datasets/source-components/2026-09-26.1/dataset-card.md"
     },
     {
+      "id": "source-components/2026-09-27.1",
+      "family": "source-components",
+      "version": "2026-09-27.1",
+      "release_tag": "datasets-2026-09-27.1",
+      "asset": {
+        "name": "source-components-2026-09-27.1.tar.gz",
+        "sha256": "7949289473afd54340828cb2787aa12de075db2243d86ab7389f40798fea5a98",
+        "size_bytes": 13422242,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "05220420c438f9c170221c222b0e204caa04d80814f21f2a0b8ce0a481ff909b",
+      "content_sha256": "d5ce0faad8bbadabff1c15c0940917887ec40ca6fc82f09139376207c880c9b2",
+      "sample_count": 616,
+      "included_sample_count": 588,
+      "split_counts": {
+        "train": 502,
+        "eval": 86
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge"
+      ],
+      "dataset_card": "datasets/source-components/2026-09-27.1/dataset-card.md"
+    },
+    {
+      "id": "source-component-holdout/2026-09-27.1",
+      "family": "source-component-holdout",
+      "version": "2026-09-27.1",
+      "release_tag": "datasets-2026-09-27.1",
+      "asset": {
+        "name": "source-component-holdout-2026-09-27.1.tar.gz",
+        "sha256": "8b04c91e56cffd97e82ab75dafb8946d7c2e85fa31de60d7b09cd74caca80a0f",
+        "size_bytes": 668933,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "5453cacc58d2bf447573625fede471b77b0477d3b181d8cc48d5e3f518f6aa13",
+      "content_sha256": "dbe506a7268908261d0607f4fee613274b16b5c7c122a067426a4658db566820",
+      "sample_count": 37,
+      "included_sample_count": 21,
+      "split_counts": {
+        "eval": 21
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge"
+      ],
+      "dataset_card": "datasets/source-component-holdout/2026-09-27.1/dataset-card.md"
+    },
+    {
       "id": "held-parts/2026-09-14.1",
       "family": "held-parts",
       "version": "2026-09-14.1",

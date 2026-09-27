@@ -1,6 +1,6 @@
 # Source component pose 2026-09-26.1
 
-Status: **candidate**
+Status: **retired**
 
 This model classifies strip-feeder pockets and estimates the oriented box of
 a visible component. It implements `velocitypnp.source-component-pose.v2`.
@@ -37,6 +37,10 @@ checkpoints, ONNX files, training history, and classifier history.
 The one evaluation error is a flat component classified as empty. The pose
 head still placed its box with 0.184 input-pixel center error and 0.952 IoU.
 
+The first independent feeder holdout failed six of 21 class checks. Five flat
+components and one empty pocket were classified as on-edge. A later capture
+reproduced the defect with three flat components classified as on-edge.
+
 ## Limitations
 
 The evaluation split was also used for v4 and v5 model selection. It is not
@@ -48,6 +52,5 @@ commit `22abb29` accepts this valid zero-probability value while it continues
 to reject NaN, positive infinity, all-negative-infinity class output, and
 non-finite pose output.
 
-Keep this model in candidate state until it passes a new independent feeder
-holdout and the package is tested through the application runtime. Do not
-activate it from these reused evaluation results.
+This model is retired because the on-edge false-positive regression was
+reproduced in two feeder captures. Do not approve or activate it.

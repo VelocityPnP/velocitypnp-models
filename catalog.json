@@ -83,7 +83,7 @@
       "id": "source-component-pose/2026-09-26.1",
       "family": "source-component-pose",
       "version": "2026-09-26.1",
-      "status": "candidate",
+      "status": "retired",
       "contract_version": "velocitypnp.source-component-pose.v2",
       "release_tag": "models-2026-09-26.1",
       "asset": {
@@ -104,6 +104,32 @@
         "training_source_sha256": "cd55c6ffe7aaf307315f8c992ebca4b12923c9fbeef869d44c7292ed32ae518e"
       },
       "model_card": "models/source-component-pose/2026-09-26.1/model-card.md"
+    },
+    {
+      "id": "source-component-pose/2026-09-27.1",
+      "family": "source-component-pose",
+      "version": "2026-09-27.1",
+      "status": "candidate",
+      "contract_version": "velocitypnp.source-component-pose.v2",
+      "release_tag": "models-2026-09-27.1",
+      "asset": {
+        "name": "source-component-pose-2026-09-27.1.tar.gz",
+        "sha256": "d2ae26783bd7957cc8adc8970657026e6e83230ed740dfb229e1b66f6e0d7be2",
+        "size_bytes": 7387337,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "488e40d4daa4230232da7a179116970f28ddab4df7a0320af89d20e977883716",
+      "onnx_sha256": "1a51fed884de8a2098126b753199c54d78c6e86cd52a333b1ec7276ed641f18a",
+      "checkpoint_sha256": "84e6511a51a3f39c099c27c33a84bb505fe81223ed71703635ee25ad93011909",
+      "dataset_content_sha256": "d5ce0faad8bbadabff1c15c0940917887ec40ca6fc82f09139376207c880c9b2",
+      "dataset": "source-components/2026-09-27.1",
+      "source": {
+        "git_commit": "0d6427d4e929f45f02c5fb3ccb2f36677ab51e22",
+        "dirty": false,
+        "training_source_sha256": "cd55c6ffe7aaf307315f8c992ebca4b12923c9fbeef869d44c7292ed32ae518e"
+      },
+      "model_card": "models/source-component-pose/2026-09-27.1/model-card.md"
     }
   ]
 }
