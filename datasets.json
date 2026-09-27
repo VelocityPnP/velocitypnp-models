@@ -54,6 +54,32 @@
       "dataset_card": "datasets/source-components/2026-09-20.1/dataset-card.md"
     },
     {
+      "id": "source-components/2026-09-26.1",
+      "family": "source-components",
+      "version": "2026-09-26.1",
+      "release_tag": "datasets-2026-09-26.2",
+      "asset": {
+        "name": "source-components-2026-09-26.1.tar.gz",
+        "sha256": "466c6187e91ef31938ba3b70ef9ec0ed156c3144a93707cfb8e0880709536bf3",
+        "size_bytes": 13196696,
+        "availability": "local",
+        "download_url": null
+      },
+      "manifest_sha256": "8c1b0fc3549a572d832e5c2b112b797e42211f479021a0878f32dc21eecd4766",
+      "content_sha256": "e108470370b3aebf0ac986b710c9755ad11cb844d5ae3a0a09ff345029ea8673",
+      "sample_count": 595,
+      "included_sample_count": 567,
+      "split_counts": {
+        "train": 501,
+        "eval": 66
+      },
+      "classes": [
+        "component_flat",
+        "component_on_edge"
+      ],
+      "dataset_card": "datasets/source-components/2026-09-26.1/dataset-card.md"
+    },
+    {
       "id": "held-parts/2026-09-14.1",
       "family": "held-parts",
       "version": "2026-09-14.1",
