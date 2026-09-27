@@ -116,8 +116,8 @@
         "name": "source-component-pose-2026-09-27.1.tar.gz",
         "sha256": "d2ae26783bd7957cc8adc8970657026e6e83230ed740dfb229e1b66f6e0d7be2",
         "size_bytes": 7387337,
-        "availability": "local",
-        "download_url": null
+        "availability": "published",
+        "download_url": "https://github.com/VelocityPnP/velocitypnp-models/releases/download/models-2026-09-27.1/source-component-pose-2026-09-27.1.tar.gz"
       },
       "manifest_sha256": "488e40d4daa4230232da7a179116970f28ddab4df7a0320af89d20e977883716",
       "onnx_sha256": "1a51fed884de8a2098126b753199c54d78c6e86cd52a333b1ec7276ed641f18a",
