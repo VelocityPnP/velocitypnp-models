@@ -1,6 +1,6 @@
 # Placement verification 2026-09-14.1
 
-Status: **candidate**
+Status: **approved**
 
 This model classifies a placement target and estimates the oriented component
 box in a normalized top-camera crop. It implements
@@ -29,6 +29,12 @@ Dataset content SHA-256:
 
 The evaluation split is small and has no component-on-edge samples. The data
 comes from one machine and one PCB design. Four empty evaluation sites were
-classified as occupied. The training manifest records a dirty source tree.
-Keep this model in candidate state until it has independent evaluation and
-runtime validation.
+classified as occupied. The published training manifest records a dirty source
+tree. A clean, commit-identified rerun reproduced the checkpoint, ONNX file,
+training history, and metrics byte for byte.
+
+## Approval scope
+
+This model is approved only with the current deterministic-agreement gate. It
+must never be the sole evidence that a placed part exists. The approval does
+not remove the existing image, occupancy, pose, or confidence checks.

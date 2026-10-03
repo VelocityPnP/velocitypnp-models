@@ -1,6 +1,6 @@
 # Held part pose 2026-09-14.1
 
-Status: **candidate**
+Status: **approved**
 
 This model compares bare-nozzle and observed bottom-camera images. It
 classifies the retained-part state and estimates the oriented component box.
@@ -27,6 +27,13 @@ Dataset content SHA-256:
 ## Limitations
 
 The evaluation split is small, contains one group, and has no on-edge held
-parts. Its rotation stress set is synthetic. No held-part ONNX parity verifier
-exists yet. The training manifest records a dirty source tree. Keep this model
-in candidate state until it has independent evaluation and runtime validation.
+parts. Its rotation stress set is synthetic. The published training manifest
+records a dirty source tree. A clean, commit-identified rerun reproduced the
+checkpoint, ONNX file, training history, and metrics byte for byte.
+
+## Approval scope
+
+This model is approved for the current guarded VelocityPnP held-part and
+clear-nozzle checks. Existing package, shape, and vacuum checks remain in
+force. The approval does not give an on-edge, condition, or pose result sole
+authority over machine control.

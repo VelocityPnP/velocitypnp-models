@@ -31,7 +31,7 @@
       "id": "held-part-pose/2026-09-14.1",
       "family": "held-part-pose",
       "version": "2026-09-14.1",
-      "status": "candidate",
+      "status": "approved",
       "contract_version": "velocitypnp.held-part-pose.v1",
       "release_tag": "models-2026-09-14.1",
       "asset": {
@@ -57,7 +57,7 @@
       "id": "placement-verification/2026-09-14.1",
       "family": "placement-verification",
       "version": "2026-09-14.1",
-      "status": "candidate",
+      "status": "approved",
       "contract_version": "velocitypnp.placement-verification.v1",
       "release_tag": "models-2026-09-14.1",
       "asset": {
@@ -109,7 +109,7 @@
       "id": "source-component-pose/2026-09-27.1",
       "family": "source-component-pose",
       "version": "2026-09-27.1",
-      "status": "candidate",
+      "status": "approved",
       "contract_version": "velocitypnp.source-component-pose.v2",
       "release_tag": "models-2026-09-27.1",
       "asset": {

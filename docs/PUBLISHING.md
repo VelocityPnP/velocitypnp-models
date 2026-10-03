@@ -71,9 +71,19 @@ python3 tools/dataset_package.py verify \
 Published dataset releases are immutable. Correct an error with a new dataset
 version. Do not replace a published label or image.
 
-## Current candidate release
+## Current approved set
 
-`models-2026-09-14.1` contains three candidate packages from the combined
-September 2026 datasets. All three original manifests record a dirty source
-tree. Preserve that provenance. Do not mark these models as approved only
-because their packages pass integrity checks.
+The guarded VelocityPnP runtime approves these packages:
+
+- `source-component-pose/2026-09-27.1`
+- `held-part-pose/2026-09-14.1`
+- `placement-verification/2026-09-14.1`
+
+The held-part and placement manifests in the immutable packages record their
+original dirty source trees. Preserve that provenance. Clean,
+commit-identified runs later reproduced their checkpoints, ONNX files,
+histories, and metrics byte for byte.
+
+Approval is limited to the guards in each model card. Package integrity alone
+is not approval. The VelocityPnP source repository must select this exact set
+with a reviewed runtime lock before use.

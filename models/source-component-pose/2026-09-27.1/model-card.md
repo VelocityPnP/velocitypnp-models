@@ -1,6 +1,6 @@
 # Source component pose 2026-09-27.1
 
-Status: **candidate**
+Status: **approved**
 
 This model classifies strip-feeder pockets and estimates the oriented box of
 a visible component. It implements `velocitypnp.source-component-pose.v2`.
@@ -56,5 +56,13 @@ The new holdout contained no on-edge parts, so it does not validate on-edge
 recall. Its component boxes were seeded by this model and accepted without
 material edits, so it is not an independent localization test.
 
-Keep this model in candidate state until an on-edge holdout and an independent
-localization check pass. Publishing this package does not activate it.
+## Approval scope
+
+This model is approved for the guarded VelocityPnP runtime. A high-confidence
+flat-component center can control pickup only inside the configured confidence,
+offset, and deterministic-disagreement bounds. An empty result can change
+pocket state only when the learned and deterministic results agree.
+
+The approval does not cover broader on-edge decisions or unrestricted learned
+localization. Those uses still need an on-edge holdout and an independent
+localization check. Publishing or approving this package does not activate it.
