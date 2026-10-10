@@ -8,26 +8,28 @@ Build a package:
 python3 tools/model_package.py build \
   FAMILY VERSION RELEASE_TAG TRAINING_OUTPUT \
   --model-card models/FAMILY/VERSION/model-card.md \
-  --output-dir dist
+  --output-dir dist/models
 ```
 
 Verify the completed archive against the catalog checksum:
 
 ```sh
 python3 tools/model_package.py verify \
-  dist/ASSET.tar.gz --sha256 EXPECTED_SHA256
+  dist/models/ASSET.tar.gz --sha256 EXPECTED_SHA256
 ```
 
 1. Build each package from a completed training-output directory.
-2. Verify the package and record its archive checksum in `catalog.json`.
-3. Add or update its model card.
-4. Run the repository tests and catalog validation.
-5. Commit the catalog and model cards.
-6. Create a draft GitHub release for the catalog release tag.
-7. Attach every package to the draft release.
-8. Download the attached assets and verify their recorded checksums.
-9. Publish the draft only after all assets pass verification.
-10. Set `availability` to `published`, add each download URL, and commit the
+2. Inspect every packaged text file for secrets, user names, host names,
+   absolute paths, and unrelated machine metadata.
+3. Verify the package and record its archive checksum in `catalog.json`.
+4. Add or update its model card.
+5. Run the repository tests and catalog validation.
+6. Commit the catalog and model cards.
+7. Create a draft GitHub release for the catalog release tag.
+8. Attach every package to the draft release.
+9. Download the attached assets and verify their recorded checksums.
+10. Publish the draft only after all assets pass verification.
+11. Set `availability` to `published`, add each download URL, and commit the
     catalog update.
 
 Published releases are immutable. If a package or report is wrong, publish a
@@ -44,8 +46,11 @@ Build a reviewed dataset package:
 python3 tools/dataset_package.py build \
   FAMILY VERSION RELEASE_TAG DATASET_DIR \
   --dataset-card datasets/FAMILY/VERSION/dataset-card.md \
-  --output-dir dist
+  --output-dir dist/datasets
 ```
+
+Keep model and dataset output directories separate. A model family and its
+dataset family can use the same asset name under different release tags.
 
 Use `--manifest` when the final manifest is below `DATASET_DIR`. Use repeated
 `--audit-root NAME=PATH` options to preserve review inputs that are outside the
@@ -55,18 +60,20 @@ Verify the completed archive:
 
 ```sh
 python3 tools/dataset_package.py verify \
-  dist/ASSET.tar.gz --sha256 EXPECTED_SHA256
+  dist/datasets/ASSET.tar.gz --sha256 EXPECTED_SHA256
 ```
 
 1. Verify that the ground-truth manifest is final and operator-reviewed.
-2. Build the package and record it in `datasets.json` as `local`.
-3. Run the repository tests and catalog validation.
-4. Commit and push the dataset catalog and card.
-5. Create a draft release with a new `datasets-*` tag.
-6. Attach every dataset package to the draft release.
-7. Download and verify every attached asset.
-8. Publish the release only after all assets pass verification.
-9. Mark each asset `published`, record its permanent URL, and commit again.
+2. Build the package and inspect it for personal, secret, or unrelated machine
+   metadata. Confirm that all images and labels can be public.
+3. Record the package in `datasets.json` as `local`.
+4. Run the repository tests and catalog validation.
+5. Commit and push the dataset catalog and card.
+6. Create a draft release with a new `datasets-*` tag.
+7. Attach every dataset package to the draft release.
+8. Download and verify every attached asset.
+9. Publish the release only after all assets pass verification.
+10. Mark each asset `published`, record its permanent URL, and commit again.
 
 Published dataset releases are immutable. Correct an error with a new dataset
 version. Do not replace a published label or image.
